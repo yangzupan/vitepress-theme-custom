@@ -1,2 +1,1 @@
 # A custom VitePress theme
-

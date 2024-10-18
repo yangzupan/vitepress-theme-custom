@@ -1,5 +1,9 @@
 ---
+title: 首页
 home: true
----
 
-这是首页的内容
+---
+# {{ $frontmatter.title }}
+
+
+## 这是首页的内容

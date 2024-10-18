@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 
-// https://vitepress.dev/reference/runtime-api#usedata
+// https://vitepress.dev/zh/reference/runtime-api#usedata
 const { site, frontmatter } = useData()
 </script>
 
