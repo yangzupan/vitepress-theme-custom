@@ -1,0 +1,22 @@
+{
+  "name": "vitepress-theme-custom-root",
+  "version": "0.1.0",
+  "description": "A custom VitePress theme",
+  "main": "index.js",
+  "keywords": [
+    "vitepress",
+    "vitepress-theme",
+    "vitepress-theme-custom"
+  ],
+  "author": {
+    "name": "YangZupan",
+    "email": "www@yangzupan.com",
+    "url": "https://yangzupan.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "pnpm -r dev",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test"
+  }
+}
