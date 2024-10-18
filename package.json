@@ -2,7 +2,6 @@
   "name": "vitepress-theme-custom-root",
   "version": "0.1.0",
   "description": "A custom VitePress theme",
-  "main": "index.js",
   "keywords": [
     "vitepress",
     "vitepress-theme",
