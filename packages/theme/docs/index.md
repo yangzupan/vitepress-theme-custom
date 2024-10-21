@@ -1,6 +1,6 @@
 ---
 title: 首页
-home: true
+layout: home
 
 ---
 # {{ $frontmatter.title }}

@@ -1,25 +1,33 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 
+import Header from './components/Header.vue'
+import Main from './components/Main.vue'
+import Footer from './components/Footer.vue'
 // https://vitepress.dev/zh/reference/runtime-api#usedata
-const { site, frontmatter } = useData()
+const { frontmatter } = useData()
 </script>
 
 <template>
-  <div v-if="frontmatter.home">
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
-    <ul>
-      <li><a href="/markdown-examples.html">Markdown Examples</a></li>
-      <li><a href="/api-examples.html">API Examples</a></li>
-      
-    </ul>
-    <Content />
+  <div v-if="frontmatter.layout !== false" class="Layout" :class="frontmatter.pageClass">
+    <slot name="layout-top" />
+    <Header></Header>
+    <Main>
+      <template #not-found>
+        <slot name="not-found" />
+      </template>
 
+    </Main>
+    <Footer />
+    <slot name="layout-bottom" />
   </div>
-  <div v-else>
-    <a href="/">Home</a>
-
-    <Content />
-  </div>
+  <Content v-else />
 </template>
+
+<style scoped>
+.Layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+</style>
